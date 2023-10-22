@@ -25,7 +25,7 @@
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
                 };
-	        td: tap dance {
+	        td: tap_dance {
                     compatible = "zmk,behavior-hold-tap";
                     label = "TAPDANCE";
                     #binding-cells = <2>;
