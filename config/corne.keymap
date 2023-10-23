@@ -73,10 +73,10 @@
                 // | DEVICE |      &     | BRI_DN | BRI_UP |   .   |       |   0  |  1  |  2  |  3  | NAVI  |
                 //                       |   GUI  |  BASE  | LSHFT |       | CTRL | SYMBOL | ALT |
                                         bindings = <
-                   &trans   &kp ESC     &kp C_PP     &kp C_PREV    &kp C_NEXT     &kp KP_MULTIPLY      &kp KP_DIVIDE  &kp N7       &kp N8   &kp N9  &trans      &trans
+                   &trans   &kp ESC     &kp C_PP     &kp C_PREV    &kp C_NEXT     &kp KP_MULTIPLY      &kp KP_DIVIDE  &kp N7       &kp N8   &kp N9  &kp BKSP    &trans
                    &trans   &kp TAB     &kp K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP   &td LC(LALT) PLUS    &kp EQUAL      &kp N4       &kp N5   &kp N6  &kp ENTER   &trans
                    &trans   &to DEVICE  &kp AMPS     &kp C_BRI_DN  &kp C_BRI_UP   &kp KP_DOT           &kp N0         &kp N1       &kp N2   &kp N3  &to NAVI    &trans
-                                            &kp LGUI      &to BASE       &trans               &trans         &to SYMBOL   &trans
+                                                     &kp LGUI      &to BASE       &trans               &trans         &to SYMBOL   &trans
                 >;
                 };
 
@@ -84,14 +84,14 @@
                         // TODO: Update the Navigation layer with mouse code
 
                 // -----------------------------------------------------------------------------------------
-                // |      |  1  |  2   |  3  |  4        |  5  |       |  6  |  7  |  8  |  9  |  0  |   |
-                // |      | SHFT| CTRL | TAB | CTRL+OPT  |     |       | LFT | DWN |  UP | RGT | BKSP|   |
-                // | BTCLR| BT1 | BT2  | BT3 |    BT4    | BT5 |       |  :  |  <  |  >  |  '  |  "  |   |
+                // |      |  1  |  2   |  3  |  4        |  5  |       |  6  |  7  |  8  |  9  | BKSP  |   |
+                // |      | SHFT| CTRL | TAB | CTRL+OPT  |     |       | LFT | DWN |  UP | RGT | ENTER |   |
+                // | BTCLR| BT1 | BT2  | BT3 |    BT4    | BT5 |       |  :  |  <  |  >  |  '  | NAVI  |   |
                 //             |   GUI  |  BASE  | LSHFT |       | CTRL | SYMBOL | ALT |
                 bindings = <
-                    &trans    &trans        &kp N3        &kp N4         &kp N5          &kp N6          &kp N7     &kp N8    &kp N9    &kp N0      &kp BSPC    &trans
-                    &trans    &trans        &kp LCTRL     &kp TAB        &kp LC(LALT)    &kp LC(LALT)    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &trans      &trans
-                    &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4    &kp COLON  &kp LT    &kp GT    &kp APOS    &trans      &trans
+                    &trans    &kp ESC       &kp N3        &kp N4         &kp N5          &kp N6          &kp N7     &kp N8    &kp N9    &kp N0      &kp BKSP     &trans
+                    &trans    &kp TAB       &kp LCTRL     &kp TAB        &kp LC(LALT)    &kp LC(LALT)    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &kp ENTER    &trans
+                    &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4    &kp COLON  &kp LT    &kp GT    &kp APOS    &to NAVI     &trans
                                                           &kp LGUI       &to BASE        &trans          &trans     &to SYMBOL   &trans
                 >;
                 };
@@ -99,15 +99,15 @@
                 device_layer {
 
                 // -----------------------------------------------------------------------------------------
-                // |  1     |  2   |  3  |  4   |  5    |       |  6   |    7   |  8  |  9  |  0  |
-                // | BT_CLR | CTRL | TAB | ESC  |       |       | LFT  |   DWN  |  UP | RGT | BKSP|
-                // |  BT1   | BT2  | BT3 | BT4  | BT5   |       |  :   |    <   |  >  |  '  |  "  |
+                // |  1     |  2   |  3  |  4   |  5    |       |  6   |    7   |  8  |  9  | BKSP  |
+                // | BT_CLR | CTRL | TAB | ESC  |       |       | LFT  |   DWN  |  UP | RGT | ENTER |
+                // |  BT1   | BT2  | BT3 | BT4  | BT5   |       |  :   |    <   |  >  |  '  | NAVI  |
                 //                 | GUI | BASE | LSHFT |       | CTRL | SYMBOL | ALT |
                 bindings = <
-                    &trans   &kp N1        &kp N2       &kp N3       &kp N4       &kp N5           &kp N6      &kp N7       &kp N8   &kp N9      &kp N0     &trans 
-                    &trans   &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT   &trans     &trans
-                    &trans   &bt BT_CLR    &kp LCTRL    &kp TAB      &kp ESC      &trans           &kp COLON   &kp LT       &kp GT   &kp APOS    &trans     &trans
-                                            &kp LGUI      &to BASE       &trans           &trans      &to SYMBOL   &trans
+                    &trans   &kp N1        &kp N2       &kp N3       &kp N4       &kp N5           &kp N6      &kp N7       &kp N8   &kp N9      &kp BKSP      &trans 
+                    &trans   &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT   &kp ENTER     &trans
+                    &trans   &bt BT_CLR    &kp LCTRL    &kp TAB      &kp ESC      &trans           &kp COLON   &kp LT       &kp GT   &kp APOS    &to NAVI      &trans
+                                                        &kp LGUI     &to BASE     &trans           &trans      &to SYMBOL   &trans
                 >;
                 };
         };
