@@ -45,9 +45,9 @@
                 // |    Z   |   X   |   C   |     V    |   B   |       |  N    |       M       |   /(_)  |  ,(-)  |  .(!)  |
                 // | CMD+LSHFT+TAB (CMD+~)  | SPC(MEH) | LSHFT |       | RCTRL | SYMBOL_LAYER  | CMG+TAB |
                 bindings = <
-                &kp Q  &kp W  &kp E                     &kp R                &kp T          &kp Y      &kp U       &kp I           &kp O            &kp BKSP 
-                &kp A  &kp S  &hm LALT D                &kp F                &kp G          &kp H      &kp J       &kp K           &kp L            &kp P
-                &kp Z  &kp X  &kp C                     &kp V                &kp B          &kp N      &kp M       &td UNDER FSLH  &td MINUS COMMA  &td EXCL DOT      
+                &trans  &kp Q  &kp W  &kp E                     &kp R                &kp T          &kp Y      &kp U       &kp I           &kp O            &kp BKSP       &trans  
+                &trans  &kp A  &kp S  &hm LALT D                &kp F                &kp G          &kp H      &kp J       &kp K           &kp L            &kp P          &trans
+                &trans  &kp Z  &kp X  &kp C                     &kp V                &kp B          &kp N      &kp M       &td UNDER FSLH  &td MINUS COMMA  &td EXCL DOT   &trans   
                               &td LG(TILDE) LG(LS(TAB)) &mt LC(LS(LALT)) SPC &kp LSHFT      &kp RCTRL  &to SYMBOL  &kp RG(TAB)
                 >;
                 };
@@ -59,9 +59,9 @@
                 // |  ~  |  `  |       BT1       |  BT2 |   "   |       |   <   |     >     |    '  |   "   |  NAVI  |
                 //                         | GUI | BASE | LSHFT |       | RCTRL |  NUM_CTRL |  RALT |
                 bindings = <
-                   &kp ESC    &kp AT      &td LC(LG(LS(N4))) HASH &kp DLLR      &kp PRCNT        &kp CARET  &kp AMPS      &kp ASTRK  &td COLON SEMI  &kp BKSP
-                   &kp TAB    &kp EQUAL   &kp LT                  &kp GT        &kp SQT          &kp BSLH   &kp LBRC      &kp RBRC   &kp PIPE        &kp ENTER  
-                   &kp TILDE  &kp GRAVE   &bt BT_SEL 1            &bt BT_SEL 2  &kp DQT          &kp LBKT   &kp LPAR      &kp RPAR   &kp RBKT        &kp NAVI 
+                   &trans   &kp ESC    &kp AT      &td LC(LG(LS(N4))) HASH &kp DLLR      &kp PRCNT        &kp CARET  &kp AMPS      &kp ASTRK  &td COLON SEMI  &kp BKSP     &trans
+                   &trans   &kp TAB    &kp EQUAL   &kp LT                  &kp GT        &kp SQT          &kp BSLH   &kp LBRC      &kp RBRC   &kp PIPE        &kp ENTER    &trans
+                   &trans   &kp TILDE  &kp GRAVE   &bt BT_SEL 1            &bt BT_SEL 2  &kp DQT          &kp LBKT   &kp LPAR      &kp RPAR   &kp RBKT        &kp NAVI     &trans
                                           &kp LGUI                &to BASE      &kp LSHFT        &kp RCTRL  &to NUM_CTRL  &kp RALT
                 >;
                 };
@@ -73,9 +73,9 @@
                 // | DEVICE |      &     | BRI_DN | BRI_UP |   .   |       |   0  |  1  |  2  |  3  | NAVI  |
                 //                       |   GUI  |  BASE  | LSHFT |       | CTRL | SYMBOL | ALT |
                                         bindings = <
-                   &kp ESC     &kp C_PP     &kp C_PREV    &kp C_NEXT     &kp KP_MULTIPLY      &kp KP_DIVIDE  &kp N7       &kp N8   &kp N9  &trans
-                   &kp TAB     &kp K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP   &kp PLUS             &kp EQUAL      &kp N4       &kp N5   &kp N6  &kp ENTER 
-                   &to DEVICE  &kp AMPS     &kp C_BRI_DN  &kp C_BRI_UP   &kp KP_DOT           &kp N0         &kp N1       &kp N2   &kp N3  &kp NAVI
+                   &trans   &kp ESC     &kp C_PP     &kp C_PREV    &kp C_NEXT     &kp KP_MULTIPLY      &kp KP_DIVIDE  &kp N7       &kp N8   &kp N9  &trans      &trans
+                   &trans   &kp TAB     &kp K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP   &kp PLUS             &kp EQUAL      &kp N4       &kp N5   &kp N6  &kp ENTER   &trans
+                   &trans   &to DEVICE  &kp AMPS     &kp C_BRI_DN  &kp C_BRI_UP   &kp KP_DOT           &kp N0         &kp N1       &kp N2   &kp N3  &kp NAVI    &trans
                                             &kp LGUI      &to BASE       &trans               &trans         &to SYMBOL   &trans
                 >;
                 };
@@ -89,9 +89,9 @@
                 // | BTCLR| BT1 | BT2  | BT3 | BT4 | BT5 |       |  :  |  <  |  >  |  '  |  "  |   |
                 //             |   GUI  |  BASE  | LSHFT |       | CTRL | SYMBOL | ALT |
                 bindings = <
-                        &kp N2        &kp N3       &kp N4       &kp N5       &kp N6          &kp N7     &kp N8    &kp N9    &kp N0      &kp BSPC
-                        &kp  LSHFT    &kp LCTRL    &kp TAB      &kp ESC      &trans          &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &kp BSPC 
-                        &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp COLON  &kp LT    &kp GT    &kp APOS    &kp SQT  
+                    &trans    &kp N2        &kp N3       &kp N4       &kp N5       &kp N6          &kp N7     &kp N8    &kp N9    &kp N0      &kp BSPC    &trans
+                    &trans    &kp  LSHFT    &kp LCTRL    &kp TAB      &kp ESC      &trans          &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &kp BSPC    &trans
+                    &trans    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp COLON  &kp LT    &kp GT    &kp APOS    &kp SQT     &trans
                                             &kp LGUI      &to BASE       &trans               &trans         &to SYMBOL   &trans
                 >;
                 };
@@ -104,9 +104,9 @@
                 // |  BT1   | BT2  | BT3 | BT4  | BT5   |       |  :   |    <   |  >  |  '  |  "  |
                 //                 | GUI | BASE | LSHFT |       | CTRL | SYMBOL | ALT |
                 bindings = <
-                    &kp N1        &kp N2       &kp N3       &kp N4       &kp N5           &kp N6      &kp N7       &kp N8   &kp N9      &kp N0  
-                    &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT   &kp BSPC
-                    &bt BT_CLR    &kp LCTRL    &kp TAB      &kp ESC      &trans           &kp COLON   &kp LT       &kp GT   &kp APOS    &kp SQT
+                    &trans   &kp N1        &kp N2       &kp N3       &kp N4       &kp N5           &kp N6      &kp N7       &kp N8   &kp N9      &kp N0     &trans 
+                    &trans   &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT   &kp BSPC   &trans
+                    &trans   &bt BT_CLR    &kp LCTRL    &kp TAB      &kp ESC      &trans           &kp COLON   &kp LT       &kp GT   &kp APOS    &kp SQT    &trans
                                             &kp LGUI      &to BASE       &trans           &trans      &to SYMBOL   &trans
                 >;
                 };
