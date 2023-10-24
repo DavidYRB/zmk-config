@@ -44,7 +44,7 @@
                 // -----------------------------------------------------------------------------------------
                 // |    Q   |   W   |   E   |     R    |   T   |       |  Y    |       U       |     I   |    O   |  BKSP  | 
                 // |    A   |   S   |   D   |     F    |   G   |       |  H    |       J       |     K   |    L   |    P   |
-                // |    Z   |   X   |   C   |     V    |   B   |       |  N    |       M       |   /(_)  |  ,(-)  |  .(!)  |
+                // |    Z   |   X   |   C   |     V    |   B   |       |  N    |       M       |   /(_)? |  ,(-)  |  .(!)  |
                 // | CMD+LSHFT+TAB (CMD+~)  | SPC(MEH) | LSHFT |       | RCTRL | SYMBOL_LAYER  | CMG+TAB |
                 bindings = <
                 &kp Q  &kp Q  &kp W  &kp E                     &kp R         &kp T            &kp Y      &kp U        &kp I           &kp O            &kp BKSP       &kp BKSP      
@@ -58,7 +58,7 @@
                 // -----------------------------------------------------------------------------------------
                 // | ESC |  @  |  #(screenshot)  |   $  |   %   |       |   ^   |     &     |    *  |  ;(:) |  BKSP  |
                 // | TAB |  =  |       <         |   >  |   '   |       |   \   |     {     |    }  |  "|"  |  ENTER |
-                // |  ~  |  `  |       BT1       |  BT2 |   "   |       |   <   |     >     |    '  |   "   |  NAVI  |
+                // |  ~  |  `  |       BT1       |  BT2 |   "   |       |   [   |     (     |    )  |   ]   |  NAVI  |
                 //                         | GUI | BASE | LSHFT |       | RCTRL |  NUM_CTRL |  RALT |
                 bindings = <
                    &trans   &kp ESC    &kp AT      &td LC(LG(LS(N4))) HASH &kp DLLR      &kp PRCNT             &kp CARET  &kp AMPS      &kp ASTRK  &td COLON SEMI  &kp BKSP     &trans
@@ -86,13 +86,13 @@
                         // TODO: Update the Navigation layer with mouse code
 
                 // -----------------------------------------------------------------------------------------
-                // |      |  1  |  2   |  3  |  4        |  5  |       |  6  |  7  |  8  |  9  | BKSP  |   |
-                // |      | SHFT| CTRL | TAB | CTRL+OPT  |     |       | LFT | DWN |  UP | RGT | ENTER |   |
-                // | BTCLR| BT1 | BT2  | BT3 |    BT4    | BT5 |       |  :  |  <  |  >  |  '  | NAVI  |   |
+                // |      |  1  |  2   |   3  |  4    |    5     |       |  6  |  7  |  8  |  9  | BKSP  |   |
+                // |      | SHFT| CTRL | LALT |  CMD  | CTRL+OPT |       | LFT | DWN |  UP | RGT | ENTER |   |
+                // | BTCLR| BT1 | BT2  |  BT3 |  BT4  |    BT5   |       |  :  |  <  |  >  |  '  | NAVI  |   |
                 //             |   GUI  |  BASE  | LSHFT |       | CTRL | SYMBOL | ALT |
                 bindings = <
                     &trans    &kp ESC       &kp N3        &kp N4         &kp N5          &kp N6          &kp N7     &kp N8    &kp N9    &kp N0      &kp BKSP     &trans
-                    &trans    &kp TAB       &kp LCTRL     &kp TAB        &kp LC(LALT)    &kp LC(LALT)    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &kp ENTER    &trans
+                    &trans    &kp TAB       &kp LCTRL     &kp LALT       &kp LGUI        &kp LC(LALT)    &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT   &kp ENTER    &trans
                     &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4    &kp COLON  &kp LT    &kp GT    &kp APOS    &to NAVI     &trans
                                                           &kp LGUI       &to BASE        &trans          &trans     &to SYMBOL   &trans
                 >;
